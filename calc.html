@@ -4,22 +4,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Pré-conexão e importação da fonte 'Ubuntu' do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Título da página e referências aos arquivos de estilo e script -->
   <title>Projeto Prático Guiado 1</title>
   <link rel="stylesheet" href="calc.css">
   <script src="calc.js" defer></script>
 </head>
 <body>
+  <!-- Corpo principal da página com tema escuro por padrão -->
   <main data-theme="dark">
+    <!-- Cabeçalho da calculadora com título e botão para alternar temas -->
     <header class="flex align-center justify-between">
       <h1>Calculadora</h1>
       <button id="themeSwitcher">Switch Theme Dark/Light</button>
     </header>
+    
+    <!-- Campo de input para a expressão da calculadora -->
     <input type="text" id="input">
+    
+    <!-- Teclas da calculadora em uma seção 'keys' -->
     <div id="keys">
+      <!-- Botão para limpar a expressão -->
       <button id="clear">C</button>
+      <!-- Botões para parênteses, operadores e dígitos -->
       <button class="charKey" data-value=" ( ">(</button>
       <button class="charKey" data-value=" ) ">)</button>
       <button class="charKey" data-value=" / ">/</button>
@@ -38,8 +50,11 @@
       <button class="charKey" data-value="0">0</button>
       <button class="charKey" data-value=".">.</button>
       <button class="charKey" data-value=" % ">mod</button>
+      <!-- Botão de igual para calcular o resultado -->
       <button id="equal">=</button>
     </div>
+    
+    <!-- Seção inferior com botão de cópia e campo de resultado desativado -->
     <section class="flex align-center justify-between">
       <button id="copyToClipboard">Copy</button>
       <input type="text" id="result" disabled>
